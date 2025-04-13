@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Shirts - Made to Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Custom Shirts</h1>
+        <p>Create your perfect shirt, made to your measurements.</p>
+    </header>
+
+    <main>
+        <section id="order-form">
+            <h2>Order Your Custom Shirt</h2>
+            <form id="shirt-form">
+                <!-- Option Selection -->
+                <div class="form-group">
+                    <label for="input-type">How would you like to provide measurements?</label>
+                    <select id="input-type" name="input-type" onchange="toggleInputMethod()">
+                        <option value="manual">Enter Measurements Manually</option>
+                        <option value="photos">Upload Photos</option>
+                    </select>
+                </div>
+
+                <!-- Manual Measurements -->
+                <div id="manual-measurements" class="input-section">
+                    <h3>Enter Your Measurements</h3>
+                    <div class="form-group">
+                        <label for="chest">Chest (in inches):</label>
+                        <input type="number" id="chest" name="chest" step="0.1" placeholder="e.g., 40.5">
+                    </div>
+                    <div class="form-group">
+                        <label for="waist">Waist (in inches):</label>
+                        <input type="number" id="waist" name="waist" step="0.1" placeholder="e.g., 34.0">
+                    </div>
+                    <div class="form-group">
+                        <label for="shoulder">Shoulder (in inches):</label>
+                        <input type="number" id="shoulder" name="shoulder" step="0.1" placeholder="e.g., 18.0">
+                    </div>
+                    <div class="form-group">
+                        <label for="arm">Arm Length (in inches):</label>
+                        <input type="number" id="arm" name="arm" step="0.1" placeholder="e.g., 25.0">
+                    </div>
+                </div>
+
+                <!-- Photo Upload -->
+                <div id="photo-upload" class="input-section" style="display: none;">
+                    <h3>Upload Photos</h3>
+                    <div class="form-group">
+                        <label for="front-photo">Front Photo:</label>
+                        <input type="file" id="front-photo" name="front-photo" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="side-photo">Side Photo:</label>
+                        <input type="file" id="side-photo" name="side-photo" accept="image/*">
+                    </div>
+                </div>
+
+                <!-- Shirt Customization -->
+                <div class="form-group">
+                    <label for="fabric">Fabric Type:</label>
+                    <select id="fabric" name="fabric">
+                        <option value="cotton">Cotton</option>
+                        <option value="linen">Linen</option>
+                        <option value="blend">Cotton Blend</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color" value="#ffffff">
+                </div>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Custom Shirts. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleInputMethod() {
+            const inputType = document.getElementById('input-type').value;
+            const manualSection = document.getElementById('manual-measurements');
+            const photoSection = document.getElementById('photo-upload');
+
+            if (inputType === 'manual') {
+                manualSection.style.display = 'block';
+                photoSection.style.display = 'none';
+            } else {
+                manualSection.style.display = 'none';
+                photoSection.style.display = 'block';
+            }
+        }
+
+        document.getElementById('shirt-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Order submitted! (This is a demo - integrate with a backend for processing.)');
+        });
+    </script>
+</body>
+</html>
