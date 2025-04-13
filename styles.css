@@ -29,6 +29,52 @@ main {
     padding: 0 1rem;
 }
 
+/* New Sample Shirts Section */
+#sample-shirts {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#sample-shirts h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.shirt-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.shirt-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.shirt-item:hover {
+    transform: translateY(-5px);
+}
+
+.shirt-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.shirt-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Order Form Styles */
 #order-form {
     background: white;
     padding: 2rem;
@@ -98,6 +144,15 @@ footer {
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.8rem;
+    }
+
+    .shirt-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shirt-item {
+        max-width: 100%;
     }
 
     #order-form {
