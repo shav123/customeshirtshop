@@ -1,0 +1,58 @@
+{
+    "fabrics": [
+        {
+            "id": "cotton",
+            "name": "Cotton",
+            "description": "Soft and breathable, ideal for everyday wear."
+        },
+        {
+            "id": "linen",
+            "name": "Linen",
+            "description": "Lightweight and airy, perfect for warm weather."
+        },
+        {
+            "id": "blend",
+            "name": "Cotton Blend",
+            "description": "Durable mix of cotton and synthetic fibers."
+        }
+    ],
+    "colors": [
+        {
+            "id": "white",
+            "name": "White",
+            "hex": "#FFFFFF"
+        },
+        {
+            "id": "blue",
+            "name": "Blue",
+            "hex": "#3498DB"
+        },
+        {
+            "id": "black",
+            "name": "Black",
+            "hex": "#000000"
+        }
+    ],
+    "measurement_fields": [
+        {
+            "id": "chest",
+            "label": "Chest",
+            "unit": "inches"
+        },
+        {
+            "id": "waist",
+            "label": "Waist",
+            "unit": "inches"
+        },
+        {
+            "id": "shoulder",
+            "label": "Shoulder",
+            "unit": "inches"
+        },
+        {
+            "id": "arm",
+            "label": "Arm Length",
+            "unit": "inches"
+        }
+    ]
+}
